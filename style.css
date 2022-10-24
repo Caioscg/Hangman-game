@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: rgb(14, 14, 19);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,21 +25,21 @@ h1 {
     width: 400px;
 }
 .cabeca {
-    background-color: black;
+    background-color: rgb(14, 14, 19);
     width: 400px;
     height: 160px;
     position: absolute;
     top: 0;
 }
 .braco-esquerdo {
-    background-color: black;
+    background-color: rgb(14, 14, 19);
     width: 135px;
     height: 152px;
     position: absolute;
     top: 160px;
 }
 .braco-direito {
-    background-color: black;
+    background-color: rgb(14, 14, 19);
     width: 135px;
     height: 152px;
     position: absolute;
@@ -47,7 +47,7 @@ h1 {
     top: 160px;
 }
 .torso {
-    background-color: black;
+    background-color: rgb(14, 14, 19);
     width: 130px;
     height: 152px;
     position: absolute;
@@ -55,14 +55,14 @@ h1 {
     left: 135px;
 }
 .perna-esquerda {
-    background-color: black;
+    background-color: rgb(14, 14, 19);
     width: 202px;
     height: 150px;
     position: absolute;
     bottom: 0;
 }
 .perna-direita {
-    background-color: black;
+    background-color: rgb(14, 14, 19);
     width: 198px;
     height: 150px;
     position: absolute;
