@@ -8,6 +8,7 @@ let error = 0
 let win
 const maxErrors = parts.length
 const darth = document.querySelector("#darth-vader")
+const border = document.querySelector(".boneco")
 
 showWord()   //just to show the amount of letters in the beginning
 
@@ -31,6 +32,7 @@ function showWord() {
         const victory = document.querySelector("#win")
         victory.style.width = "400px"
         darth.style.visibility = "hidden"
+        border.style.border = "0"
     }
 }
 function guesses() {
@@ -43,8 +45,8 @@ function guesses() {
         return
     }
     const guess = prompt("Chute uma letra:")
-    if (guess === null) {
-        const guess = prompt("Chute uma letra:")
+    if (guess === null) {                   // if just cancel the prompt
+        return
     }
     if (efectiveGuesses.includes(guess)) {   // same guess letter
         alert("Chute já efetuado!")

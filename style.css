@@ -17,6 +17,7 @@ h1 {
 }
 .boneco {
     width: 400px;
+    border: 1px solid goldenrod;
     display: flex;
     position: relative;
 }
