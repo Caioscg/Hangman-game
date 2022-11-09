@@ -1,8 +1,33 @@
 const button = document.querySelector("button")
 button.addEventListener("click", guesses)
 
+let random
 const efectiveGuesses = []
-const word = 'disciplina'
+const word = [
+    'disciplina',
+    'jujuba',
+    'ucrania',
+    'mititar',
+    'querosene',
+    'detalhamento',
+    'purgatorio',
+    'intrigante',
+    'vaporizar',
+    'azulejo', 
+    'diagnostico',
+    'limonada',
+    'janela',
+    'passarinho',
+    'umbigo',
+    'geleia',
+    'pijama',
+    'basquete',
+    'champanhe',
+    'modernidade',
+    'reportagem',
+    'temperatura'
+]
+random = getRandom()
 const parts = Array.from(document.querySelectorAll(".parte"))
 let error = 0
 let win
@@ -14,11 +39,11 @@ showWord()   //just to show the amount of letters in the beginning
 
 function showWord() {
     let answer = ''
-    for (i=0; i < word.length; i++) {
-        if (efectiveGuesses.includes(word[i])) {
-            answer = answer + `<span class="letra">${word[i]}</span>`
+    for (i=0; i < word[random].length; i++) {
+        if (efectiveGuesses.includes(word[random][i])) {
+            answer = answer + `<span class="letra">${word[random][i]}</span>`
         }
-        else if (word[i] === " ") {
+        else if (word[random][i] === " ") {
             answer = answer + " "
         }
         else {
@@ -41,7 +66,7 @@ function guesses() {
         return
     }
     if (error === maxErrors) {              // already lost
-        alert("Você perdeu!")
+        alert(`Você perdeu!`)
         return
     }
     const guess = prompt("Chute uma letra:")
@@ -55,7 +80,7 @@ function guesses() {
     
     efectiveGuesses.push(guess)
     
-    if (word.includes(guess)) {
+    if (word[random].includes(guess)) {
         showWord()
     }
     else {
@@ -70,10 +95,22 @@ function guesses() {
             document.querySelector(".braco-esquerdo").setAttribute("class", "mostrar")
         } ... */
         if (error === maxErrors) {
-            alert("Você perdeu!")
+            alert(`Você perdeu!`)
+            showWordAfterLost()
         }
         else {
             alert("Chute errado, tente novamente!")
         }
     }
+}
+
+function getRandom() {
+    random = Math.floor(Math.random() * 10)
+    return random
+}
+
+function showWordAfterLost() {
+    const wordAfterLost = document.querySelector('#wordAfterLost')
+    wordAfterLost.innerHTML = `A palavra era: ${word[random]}`
+    wordAfterLost.style.visibility = "visible"
 }

@@ -79,7 +79,7 @@ h1 {
 .letra {
     border: 1px solid goldenrod;
 }
-button {
+#guess {
     background-color: #4894c3;
     color: white;
     padding: 10px 20px;
@@ -89,6 +89,25 @@ button {
 #win {
     position: absolute;
     top: 0;
+}
+#wordAfterLost {
+    color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    visibility: hidden;
+}
+#playAgain {
+    width: 250px;
+    height: 100px;
+    font-size: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgb(14, 14, 19);
+    color: rgb(186, 186, 186);
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid white;
+    border-radius: 5%;
 }
 footer {
     position: absolute;
