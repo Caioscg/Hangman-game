@@ -105,7 +105,7 @@ function guesses() {
 }
 
 function getRandom() {
-    random = Math.floor(Math.random() * 10)
+    random = Math.floor(Math.random() * 22)
     return random
 }
 
