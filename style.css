@@ -108,6 +108,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     border: 1px solid white;
     border-radius: 5%;
+    cursor: pointer;
 }
 footer {
     position: absolute;
