@@ -7,7 +7,7 @@ const word = [
     'disciplina',
     'jujuba',
     'ucrania',
-    'mititar',
+    'militar',
     'querosene',
     'detalhamento',
     'purgatorio',
